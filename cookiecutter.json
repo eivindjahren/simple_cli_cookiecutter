@@ -1,0 +1,10 @@
+{
+  "full_name": "Equinor",
+  "email": "fg_sib-scout@equinor.com",
+  "github_username": "equinor",
+  "project_name": "Simple Cli Utility",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "executable_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_short_description": "Simple cli utility.",
+  "_copy_without_render": [".github"]
+}
