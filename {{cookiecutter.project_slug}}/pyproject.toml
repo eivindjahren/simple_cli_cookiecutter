@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.project_name}}"
+description="{{ cookiecutter.project_short_description }}"
+readme = "README.md"
+classifiers=[
+    "Development Status :: 1 - Planning",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = ["numpy"]
+dynamic=["version"]
+
+authors = [
+    {name="{{ cookiecutter.full_name.replace('\"', '\\\"') }}", email={{ cookiecutter.email }} },
+]
+
+[project.license]
+text = "LGPL-3.0"
+
+[project.urls]
+"Homepage" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "tox",
+    "pre-commit"
+]
+
+[option.entry_points]
+console_scripts =
+    "{{cookiecutter.project_slug}}={{cookiecutter.project_slug}}.__main__:main",
+
+[tool.setuptools_scm]
