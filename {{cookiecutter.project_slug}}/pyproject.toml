@@ -26,7 +26,7 @@ authors = [
 text = "LGPL-3.0"
 
 [project.urls]
-"Homepage" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+"Homepage" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
 
 [project.optional-dependencies]
 dev = [
@@ -36,7 +36,6 @@ dev = [
 ]
 
 [option.entry_points]
-console_scripts =
-    "{{cookiecutter.project_slug}}={{cookiecutter.project_slug}}.__main__:main",
+console_scripts = "{{cookiecutter.project_slug}}={{cookiecutter.project_slug}}.__main__:main"
 
 [tool.setuptools_scm]
